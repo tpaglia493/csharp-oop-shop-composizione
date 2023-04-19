@@ -21,9 +21,30 @@ namespace CSharp_Composizione_Shop
         //CONSTRUCTOR
 
         //GETTERS
-
+        public string GetName()
+        {
+            return name;
+        }
+        public string GetCity()
+        {
+            return city;
+        }
+        public string GetStreet()
+        {
+            return street;
+        }
+        public int GetStreetNumber()
+        {
+            return streetNumber;
+        }
         //SETTERS
 
         //METHODS
+
+        public string GetAddress()
+        {
+            string address = $"Name of the shop: {this.name} /n{this.streetNumber}, {this.street},  {this.city}";
+            return address;
+        }
     }
 }
