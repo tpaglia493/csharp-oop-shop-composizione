@@ -22,3 +22,12 @@ Fate in modo che uno shop possa anche essere costruito fin da subito con una lis
 Fate in modo che possa chiedere al negozio istanziato, il numero di prodotti che tratta attualmente. 
 E se aggiungo nuovi prodotti questo numero incrementi di conseguenza rimanendo sempre coerente!
  */
+
+using CSharp_Composizione_Shop;
+
+Shop test1 = new Shop("fake name", "fake city", "fake street", 1234);
+Console.WriteLine(test1.GetName());
+Console.WriteLine(test1.GetCity());
+Console.WriteLine(test1.GetStreet());
+Console.WriteLine(test1.GetStreetNumber());
+Console.WriteLine(test1.GetAddress());

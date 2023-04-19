@@ -51,7 +51,7 @@ namespace CSharp_Composizione_Shop
 
         public string GetAddress()
         {
-            string address = $"Name of the shop: {this.name} /n{this.streetNumber}, {this.street},  {this.city}";
+            string address = $"Name of the shop: {this.name} \n{this.streetNumber}, {this.street},  {this.city}";
             return address;
         }
     }
