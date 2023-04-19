@@ -1,8 +1,4 @@
 ﻿/*
-si possa inserire la lista di prodotti inziali o eventualmente una lista di prodotti nuovi che tratterò in più da oggi in poi nel negozio.
-Aggiungete poi ai vostri prodotti anche una Categoria ( o Category ) avvalendovi sempre del metodo della composizione, 
-questa volta dentro il vostro Prodotto, in modo che potete tenere traccia della categoria di ogni prodotto. 
-La categoria, oltre al semplice nome, potrebbe avere una descrizione e un codice identificativo ad uso interno.
 
 
 BONUS:
@@ -12,29 +8,25 @@ E se aggiungo nuovi prodotti questo numero incrementi di conseguenza rimanendo s
  */
 
 using CSharp_Composizione_Shop;
-
+//CATEGORIES
+Category dress = new Category("Dress", "Something you wear");
+Category furniture = new Category("Furniture", "Basic furnitures for every house");
+Category tool = new Category("Tool", "You can use it to do things");
+Category book = new Category("Book", "Can use it to read");
 
 //INITIALIZE THE [OBJECT]SHOP
 Shop test1 = new Shop("fake name", "fake city", "fake street", 1234);
 
+
 //INITIALIZE PRODUCTS 
-Product product1 = new Product("Table", "It's a table", 45.00f, 22.00f);
-Product product2 = new Product("Chair", "It's a chair", 25.00f, 22.00f);
-Product product3 = new Product("Spoon", "It's a spoon", 2.00f, 22.00f);
-Product product4 = new Product("Table", "It's another more expensive table", 90.00f, 22.00f);
+Product product1 = new Product("Table", "It's a table", 45.00f, 22.00f, furniture);
+Product product2 = new Product("Chair", "It's a chair", 25.00f, 22.00f, furniture);
+Product product3 = new Product("Spoon", "It's a spoon", 2.00f, 22.00f, tool);
+Product product4 = new Product("Expensive dress", "It's an expensive dress", 900.00f, 22.00f, dress);
 
 //ADDING SINGLE PRODUCT TO LIST OF PRODUCTS OF SHOP NAMED test1
 test1.AddSingleProductToProducts(product1);
 
-
-//PRINTING INFO OF ALL PRODUCTS IN THE LIST
-/*
-foreach(Product product in test1.products)
-{
-    string info = product.GetInfo();
-    Console.WriteLine(info);
-}    
-*/
 
 //CREATING ANOTHER LIST 
 List<Product> summerCollection = new List<Product>();
@@ -44,20 +36,14 @@ summerCollection.Add(product3);
 summerCollection.Add(product4);
 
 
-//PRINTING INFO OF ALL PRODUCTS IN THE NEW LIST
-/*
-foreach (Product product in summerCollection)
-{
-    string info = product.GetInfo();
-    Console.WriteLine(info);
-} 
-*/
-
 //CONCATENATE LIST TO SHOP LIST
 test1.ConcatListToProducts(summerCollection);
 
-foreach (Product product in test1.products)
+foreach (Product product  in test1.products)
 {
-    string info = product.GetInfo();
+
+    string info = product.GetCategory().GetCategoryInfo();
+     info += product.GetInfo();
     Console.WriteLine(info);
 }
+
