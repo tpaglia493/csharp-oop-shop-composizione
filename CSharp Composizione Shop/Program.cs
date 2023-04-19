@@ -1,5 +1,4 @@
 ﻿/*
-si possano chiedere ognuna delle informazioni contenute nel negozio
 si possa modificare alcune delle informazioni dello shop (pensate bene voi a cosa posso far cambiare allo shop o meno)
 si possa inserire la lista di prodotti inziali o eventualmente una lista di prodotti nuovi che tratterò in più da oggi in poi nel negozio.
 si possa inserire anche un prodotto singolo in più al negozio
@@ -30,4 +29,8 @@ Console.WriteLine(test1.GetName());
 Console.WriteLine(test1.GetCity());
 Console.WriteLine(test1.GetStreet());
 Console.WriteLine(test1.GetStreetNumber());
+Console.WriteLine(test1.GetAddress());
+
+test1.SetName("noName");
+Console.WriteLine(test1.GetName());
 Console.WriteLine(test1.GetAddress());

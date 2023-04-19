@@ -46,6 +46,22 @@ namespace CSharp_Composizione_Shop
             return streetNumber;
         }
         //SETTERS
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
+        public void SetCity(string city)
+        {
+            this.city = city;
+        }
+        public void SetStreet(string street)
+        {
+            this.street = street;        
+        }
+        public void SetStreetNumber(int streetNumber)
+        {
+            this.streetNumber = streetNumber;
+        }
 
         //METHODS
 
