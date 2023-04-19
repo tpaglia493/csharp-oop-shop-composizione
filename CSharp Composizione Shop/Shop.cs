@@ -14,11 +14,19 @@ namespace CSharp_Composizione_Shop
         private string city;
         private string street;
         private int streetNumber;
-        private List<Product> products = new();
+        private List<Product> products;
 
         //STATES
 
         //CONSTRUCTOR
+        public Shop(string name, string city, string street, int streetNumber ) 
+        {
+            this.name = name;   
+            this.city = city;   
+            this.street = street;   
+            this.streetNumber = streetNumber;
+            this.products = new();
+        }
 
         //GETTERS
         public string GetName()
