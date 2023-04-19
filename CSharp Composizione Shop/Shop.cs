@@ -71,9 +71,18 @@ namespace CSharp_Composizione_Shop
             return address;
         }
 
-        public void AddSingleProductToList(Product productName)
-        {products.Add(productName);
+        public void AddSingleProductToProducts(Product productName)
+        {
+            this.products.Add(productName);
             
+        }
+        public void ConcatListToProducts(List<Product> anyListOfProducts)
+        {
+            foreach( Product product in anyListOfProducts) 
+            {
+                this.products.Add(product);
+            }
+
         }
 
 

@@ -9,7 +9,7 @@ namespace CSharp_Composizione_Shop
     public class Product
     {
         //ATTRIBUTES & PROPERTIES
-        private int code= 33;
+        private int code;
         private string name;
         public string Name { get { return this.name; } set { this.name = value; } }
 
@@ -22,6 +22,8 @@ namespace CSharp_Composizione_Shop
         private float iva;
 
         public float Iva { get { return this.iva; } set { this.iva = value; } }
+
+        
         //STATES
 
 
@@ -36,7 +38,7 @@ namespace CSharp_Composizione_Shop
         public Product(string name, string description, float price, float iva)
         {
             this.name= name;
-           // CodeGenerator();
+            CodeGenerator();
             this.description = description;
             this.price = price;
             this.iva = iva;
