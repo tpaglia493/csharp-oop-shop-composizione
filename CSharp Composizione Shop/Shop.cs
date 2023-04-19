@@ -14,7 +14,7 @@ namespace CSharp_Composizione_Shop
         private string city;
         private string street;
         private int streetNumber;
-        private List<Product> products;
+        public List<Product> products;
 
         //STATES
 
@@ -70,5 +70,12 @@ namespace CSharp_Composizione_Shop
             string address = $"Name of the shop: {this.name} \n{this.streetNumber}, {this.street},  {this.city}";
             return address;
         }
+
+        public void AddSingleProductToList(Product productName)
+        {products.Add(productName);
+            
+        }
+
+
     }
 }

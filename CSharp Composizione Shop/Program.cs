@@ -1,5 +1,4 @@
 ﻿/*
-si possa modificare alcune delle informazioni dello shop (pensate bene voi a cosa posso far cambiare allo shop o meno)
 si possa inserire la lista di prodotti inziali o eventualmente una lista di prodotti nuovi che tratterò in più da oggi in poi nel negozio.
 si possa inserire anche un prodotto singolo in più al negozio
 si possa chiedere ad uno shop di darmi la sua rappresentazione in stringa e io possa stamparla in Console.
@@ -34,3 +33,16 @@ Console.WriteLine(test1.GetAddress());
 test1.SetName("noName");
 Console.WriteLine(test1.GetName());
 Console.WriteLine(test1.GetAddress());
+
+Product product1 = new Product("Table", "It's a table", 45.00f, 22.00f);
+Product product2 = new Product("Chair", "It's a chair", 25.00f, 22.00f);
+Product product3 = new Product("Spoon", "It's a spoon", 2.00f, 22.00f);
+Product product4 = new Product("Table", "It's another more expensive table", 90.00f, 22.00f);
+
+test1.AddSingleProductToList(product1);
+
+foreach(Product product in test1.products)
+{
+    string info = product.GetInfo();
+    Console.WriteLine(info);
+}    

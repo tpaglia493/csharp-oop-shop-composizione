@@ -9,7 +9,7 @@ namespace CSharp_Composizione_Shop
     public class Product
     {
         //ATTRIBUTES & PROPERTIES
-        private int code;
+        private int code= 33;
         private string name;
         public string Name { get { return this.name; } set { this.name = value; } }
 
@@ -36,7 +36,7 @@ namespace CSharp_Composizione_Shop
         public Product(string name, string description, float price, float iva)
         {
             this.name= name;
-            CodeGenerator();
+           // CodeGenerator();
             this.description = description;
             this.price = price;
             this.iva = iva;
@@ -56,20 +56,16 @@ namespace CSharp_Composizione_Shop
 
         private void CodeGenerator() 
         {
-            Random code = new Random();
-            this.code = code.Next(1, 99999999);
+            Random number = new Random();
+            this.code = number.Next(1, 99999999);
         }
-        public string getFormattedCodePadLeft8()
-        {
-            string codeString = this.code.ToString();
-            string codeStringPadded = codeString.PadLeft(8, '0');
-            return codeStringPadded;
-
-        }
-
+       
         public string GetInfo()
         {
-            string info = this.code +" " + Name;
+            float ivaPrice = GetIvaPrice();
+            string ivaPriceString = ivaPrice.ToString("N2");
+            string codeFormattedToString = GetCodeFormattedToString(this.code);
+            string info =$"Product Name: {name}\nIDcode: {codeFormattedToString} \nDescription: {description} \nBy the price of: {ivaPriceString} Euro";
                  return info;
         }
 
@@ -79,5 +75,10 @@ namespace CSharp_Composizione_Shop
             return ivaPrice;
         }
        
+        public string GetCodeFormattedToString(int code)
+        {
+            string codeFormattedToString = code.ToString("D8");
+            return codeFormattedToString;
+        }
     }
 }
