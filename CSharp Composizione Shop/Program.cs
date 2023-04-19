@@ -1,12 +1,4 @@
 ﻿/*
- Nome repo: csharp-oop-shop-composizione
-L'idea è di creare una classe Negozio che possa contenere una lista dei prodotti trattati per uno (o eventualmente più) shop. 
-Avvalendosi della "composizione" e usando quanto già fatto nella vostra classe Prodotto, 
-costruite questa nuova classe chiamata "Negozio" (O se volete tenere tutto in Inglese "Shop") 
-con cui poter effettuare dall'esterno le seguenti operazioni:
-Inizializzare correttamente uno shop (Lo shop deve avere un nome, una citta, un indirizzo, un numero civico). 
-La lista dei prodotti iniziali potrebbe essere vuota al momento, ma ricordatevi almeno di inizializzarla!
-
 si possano chiedere ognuna delle informazioni contenute nel negozio
 si possa modificare alcune delle informazioni dello shop (pensate bene voi a cosa posso far cambiare allo shop o meno)
 si possa inserire la lista di prodotti inziali o eventualmente una lista di prodotti nuovi che tratterò in più da oggi in poi nel negozio.
